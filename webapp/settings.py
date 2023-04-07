@@ -137,4 +137,4 @@ MEDIA_URL = '/media/'
 
 CART_SESSION_ID = 'cart'
 
-CSRF_TRUSTED_ORIGINS = ['https://web-production-cfcf.up.railway.app','https://127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://web-production-61e0.up.railway.app','https://127.0.0.1']
