@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&family=Rubik:wght@300&display=swap');
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    font-weight: 400px;
+    color: #000;
+    background-color: #fff;
+    min-width: 320px;
+}
+
+nav {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #000;
+    font-size: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    padding: 50px 0;
+
+}
+
+a {
+    color: #111;
+    text-decoration: none;
+}
+
+.make_order a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00a6ac !important;
+}
+
+
+.navbar-light .navbar-nav .navbar-link {
+    color: #111;
+    font-weight: 1000px;
+    text-transform: uppercase;
+}
+
+.navbar-nav .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+.top-menu li a::after {
+    content: none;
+    display: block;
+    width: 100%;
+    background-color: #111;
+    height: 1px;
+    transition: all .3s;
+    transform: scale(0);
+}
+
+.top-menu li a:hover::after {
+    transform: scale(1);
+}
+
+.modal-body img {
+    max-width: 100px;
+}
+
+
+
+/* carousel */
+
+/* .my-carousel {
+    margin-top: 40px;
+} */
+
+/* .my-carousel {
+    padding: 0;
+} */
+
+/* .my-carousel .carousel-item {
+    display: flex;
+    max-height: 500px;
+}
+
+.my-carousel .carousel-item img {
+    object-fit: cover;
+} */
+/* carousel */
+
+/* product */
+
+.image {
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.image img {
+    height: 300px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 7px;
+    margin-top: 40px;
+}
+
+.info h3 {
+    font-size: 21px;
+}
+
+
+.info-price {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    align-items: center;
+    margin-left: 80px;
+}
+.add-to-cart {
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8bc34a;
+    color: #fff;
+    border-radius: 10px;
+    margin-right: 110px;
+}
+
+cart:hover {
+    color: #000;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    justify-content: right;
+}
+
+.product {
+    margin-bottom: 30px;
+    border-bottom: #000;
+}
+
+.products-name {
+    text-align: center;
+    color: red;
+}
+
+/* footer */
+.footer {
+    background-color: #343434;
+}
+.footer h4 {
+    color: #ccc;
+    text-transform: uppercase;
+    font-size: 16px;
+    border-bottom: 1px solid #666;
+    padding-bottom: 3px;
+}
+
+footer a {
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer a, footer li {
+    color: #c8c8c8;
+}
+
+.footer li a {
+    display: block;
+}
+
+.footer-icons a {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 20px;
+}

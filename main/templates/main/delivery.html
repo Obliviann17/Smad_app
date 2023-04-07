@@ -1,0 +1,231 @@
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&family=Rubik:wght@300&display=swap"
+    rel="stylesheet">
+  <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+  <title>Інтернет-магазин SMAD - магазин комплектуючих для пк, ігрової переферії і техніки</title>
+  <link rel="shortcut icon" href="{% static 'main/img/SMAD logo web 2.png' %}" type="image/x-icon">
+    <style>
+
+        .first-info {
+            list-style-type: none;
+            margin-bottom: 15px;
+        }
+        .second-info {
+            list-style-type: none;
+            margin-bottom: 15px;
+        }
+        .third-info {
+            list-style-type: none;
+            margin-bottom: 15px;
+        }
+        .first-info::before {
+            color: #00a6ac;
+            content: '●';
+            padding-right: 10px;
+        }
+        .second-info::before {
+            color: #00a6ac;
+            content: '●';
+            padding-right: 10px;
+        }
+        .third-info::before {
+            color: #00a6ac;
+            content: '●';
+            padding-right: 10px;
+        }
+
+
+        div.center-list {
+            text-align: center;
+        }
+        div.center-list > ul {
+            display: inline-block;
+            text-align: left;
+            max-width: 60%;
+        }
+
+        div.center-list > p {
+            display: inline-table;
+            text-align: left;
+        }
+
+        div.center-list > img {
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .new-post {
+            margin-bottom: 50px;
+        }
+
+        div.center-list > h2, h3, h4 {
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'home' %}"><strong>SMAD</strong></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 top-menu">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Головна сторінка</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about_us' %}">Про нас</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" data-bs-toggle="dropdown" aria-current="page" href="#"><ion-icon
+                name="person-circle-outline"></ion-icon></a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="{% url 'autoris' %}">Авторизація</a></li>
+              <li><a class="dropdown-item" href="{% url 'regist' %}">Реєстрація</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal"
+              data-bs-target="#modal-cart"><ion-icon name="bag-outline"></ion-icon></a>
+            <div class="modal fade" id="modal-cart" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header bg-secondary text-white">
+                    <h5 class="modal-title" id="exampleModalLabel">Ваші Товари</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+{#                    <table class="table">#}
+{#                      <tbody>#}
+{#                        <tr>#}
+{#                          <td><img src="{% static 'main/img/SMAD logo web 2.png' %}" alt=""></td>#}
+{#                          <td><a href="#">Iphone</a></td>#}
+{#                          <td>30000 грн</td>#}
+{#                          <td>1</td>#}
+{#                        </tr>#}
+{#                      </tbody>#}
+{#                    </table>#}
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Продовжити покупки</button>
+                    <button type="submit" class="btn btn-primary"><a href="{% url 'order_create' %}">Оформити замовлення</a></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <div class="center-list">
+        <h2>Доставка</h2>
+        <ul class="delivery">
+            <li class="first-info">Отримати своє замовлення ви можете в будь-якому місті України.</li>
+            <li class="first-info">При оформленні замовлення ви бачите повну суму, яку витратите на доставку.</li>
+            <li class="first-info">Послуга післяплати в нашому магазині - безкоштовна.</li>
+            <li class="first-info">Практично всі товари є на складі в момент оформлення замовлення, тому більше 80% замовлень відправляються протягом доби.</li>
+        </ul>
+    </div>
+
+    <div class="center-list">
+        <h2>Способи доставки</h2>
+        <h3>Самовивіз з магазину (Київ, Дніпро, Харків, Львів, Одеса, Хмельницький)</h3>
+        <p>Видача товарів самовивозом в нашому магазині безкоштовна.</p>
+        <p>У магазині ви можете перевірити придбаний товар перед тим, як його забрати.</p>
+        <ul class="delivery-info">
+            <li class="second-info">Київ, вул. Вадима Гетьмана, 6, ТРЦ «Космополіт», Корпус Б, 4 этаж, Шоурум «SMAD.UA»</li>
+            <li class="second-info">Київ, вул. Мішуги, 4, ТРЦ «Піраміда», Шоурум «SMAD.UA»</li>
+            <li class="second-info">Львів, вул. Під Дубом, 4а, Точка видачі замовлень «SMAD.UA»</li>
+            <li class="second-info">Львів, комплекс Південний, вул. Щирецька, 36, ТЦ Україна, 1 поверх, Шоурум «SMAD.UA»</li>
+            <li class="second-info">Дніпро, проспект Д.Яворницкого, 100 (вхід з вул.Княгині Ольги, 1), Шоурум «SMAD.UA»</li>
+            <li class="second-info">Харків, проспект Незалежності, 17, Шоурум «SMAD.UA»</li>
+            <li class="second-info">Одеса, вул. Канатна, 75, Шоурум «SMAD.UA»</li>
+            <li class="second-info">Хмельницький, вул. Подільська, 58, Шоурум «SMAD.UA»</li>
+        </ul>
+    </div>
+
+    <div class="center-list new-post">
+        <h3>Службою доставки до відділення</h3>
+        <h4>У відділення Нової Пошти</h4>
+        <img src="{% static 'main/img/fullnp_ua.png' %}" alt="">
+        <ul>
+            <li class="third-info">Терміни доставки замовлення складають 1-3 робочих дня.</li>
+            <li class="third-info">Комісія за післяплату відсутня.</li>
+            <li class="third-info">Точна вартість доставки буде вказана на сторінці оформлення замовлення або озвучена менеджерами при оформленні замовлення.</li>
+            <li class="third-info">Ви можете відстежувати своє замовлення на сайті <a href="https://novaposhta.ua" target="_blank">«Нова Пошта»</a>.</li>
+        </ul>
+    </div>
+<footer>
+    <section class="footer ">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-6 contacts">
+            <h4>Информація</h4>
+            <ul class="list-unstyled">
+              <li><a href="{% url 'home' %}">Головна сторінка</a></li>
+              <li><a href="{% url 'about_us' %}">Про нас</a></li>
+              <li><a href="{% url 'delivery' %}">Оплата та доставка</a></li>
+              <li><a href="{% url 'contakt' %}">Контакти</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-6 contacts">
+            <h4>Час роботи</h4>
+            <ul class="list-unstyled">
+              <li>г. Київ, вул. Хрещатик, 1</li>
+              <li>Пн-Нд: 9:00 - 18:00</li>
+              <li>без перерви</li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 col-6 contacts">
+            <h4>Контакти</h4>
+            <ul class="list-unstyled">
+              <li><a href="tel:0666041370">066 604-13-70</a></li>
+              <li><a href="tel:0958375623">095 837-56-23</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 col-6 contacts">
+            <h4>Соціальні мережі</h4>
+            <div class="footer-icons">
+              <a href="https://www.instagram.com/rostisslave/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+              <a href="https://t.me/Obliviann" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+              <a href="#" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+
+</html>

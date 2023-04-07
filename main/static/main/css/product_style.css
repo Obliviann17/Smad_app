@@ -1,0 +1,19 @@
+/*.container {*/
+/*    position: relative;*/
+/*    right: 50px;*/
+/*}*/
+p {
+    font-size: 21px;
+}
+
+.prod-name {
+    text-align: center;
+}
+
+.pay-btn {
+    margin-bottom: 15px;
+}
+
+.product-true {
+    color: #304e92;
+}
